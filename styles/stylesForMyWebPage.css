@@ -1,0 +1,210 @@
+* {
+    font-family: verdana, sans-serif;
+    font-size: 14pt;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+h1 {
+    font-size: 2em;
+}
+
+.super {
+    margin-bottom: 0.67em;
+}
+
+/* header {
+    background-color: #333;
+    color: #fff;
+    padding: 10px;
+    text-align: center;
+} */
+
+header {
+    background-color: #333;
+    color: #fff;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+}
+
+h1 {
+    margin: 0;
+    text-align: center;
+    flex-grow: 1; /* Занимает доступное пространство, выравнивая по центру */
+}
+
+.button-container {
+    margin-right: 10px;
+}
+
+.logout-button {
+    padding: 10px;
+    background-color: #4CAF50;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+}
+
+/* .logout-button {
+    padding: 10px;
+    background-color: #4CAF50;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+} */
+
+footer {
+    background-color: #333;
+    color: #fff;
+    padding: 10px;
+    text-align: center;
+    margin-top: auto;
+}
+
+.container {
+    width: 80%;
+    margin: 0 auto;
+}
+
+.voting-form {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+}
+
+.option {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 23%;
+    background-color: #ccc;
+    padding: 10px;
+    text-align: center;
+    margin-bottom: 10px;
+    margin-left: 10px;
+    margin-right: 10px;
+    position: relative;
+}
+
+.option:first-child {
+    margin-left: 0;
+
+}
+
+.option:last-child {
+    margin-right: 0;
+}
+
+.option:hover {
+    background-color: #ddd;
+}
+
+.option p {
+    margin: 0;
+}
+
+.checkbox {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    border: 2px solid #333;
+    width: 14px;
+    height: 14px;
+    border-radius: 0; /* Убираем скругление углов */
+    /* display: inline-block;
+    position: relative; */
+    margin: 5px;
+}
+
+.checkbox:checked {
+    background-color: #333;
+}
+
+.vote-button {
+    background-color: #333;
+    color: #fff;
+    padding: 10px;
+    border: none;
+    cursor: pointer;
+}
+
+/* Медиа-запрос для изменения стилей на экранах с шириной 1000px и меньше */
+@media screen and (max-width: 1000px) {
+    .voting-form {
+        flex-direction: column; /* Меняем направление flex на колонну */
+        align-items: center; /* Центрируем по горизонтали */
+    }
+
+    .option {
+        width: 100%;
+        margin: 0px 0px 10px 0px;
+    }
+}
+
+.popup {
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 20px;
+    background-color: #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    z-index: 999;
+}
+
+
+.container_CommentForm {
+    max-width: 600px;
+    margin: 20px auto;
+    padding: 15px;
+    border: 2px solid black
+}
+
+.form_CommentForm {
+    width: 480px;
+    display: flex;
+    flex-direction: column;
+}
+
+.label_CommentForm {
+    margin-bottom: 10px;
+}
+
+.input_CommentForm,
+.textarea_CommentForm {
+    margin-bottom: 20px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+.button_CommentForm {
+    padding: 10px;
+    background-color: #4caf50;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+}
+
+.button_CommentForm:hover {
+    background-color: #45a049;
+}
+
+.error_CommentForm {
+    color: red;
+    margin-bottom: 10px;
+}
+
+.success_CommentForm {
+    color: green;
+    margin-bottom: 10px;
+}
